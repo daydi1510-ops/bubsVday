@@ -1,0 +1,114 @@
+body{
+  margin:0;
+  font-family:'Comic Sans MS', cursive;
+  background:#ffd9e8;
+  overflow:hidden;
+}
+
+/* Cherry blossom Minecraft-style sky */
+.sky{
+  position:fixed;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #ffb7d5 0px,
+      #ffb7d5 40px,
+      #ffcce5 40px,
+      #ffcce5 80px
+    ),
+    linear-gradient(#87ceeb,#ffd1e8);
+}
+
+/* Main card */
+.card{
+  position:relative;
+  z-index:2;
+  background:rgba(255,255,255,0.9);
+  width:360px;
+  margin:100px auto;
+  padding:30px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{ color:#ff4d88; font-size:36px; }
+h2{ color:#ff6699; }
+
+#quote{
+  font-size:18px;
+  color:#555;
+  margin:20px;
+}
+
+/* Buttons */
+.buttons{
+  margin-top:30px;
+  position:relative;
+  height:100px;
+}
+
+button{
+  padding:15px 35px;
+  border:none;
+  border-radius:30px;
+  font-size:18px;
+  cursor:pointer;
+  position:absolute;
+}
+
+#yes{
+  background:#ff4d88;
+  color:white;
+  left:30%;
+}
+
+#no{
+  background:#ddd;
+  left:55%;
+}
+
+/* Floating hearts */
+.hearts span{
+  position:fixed;
+  font-size:24px;
+  animation:float 6s linear infinite;
+}
+
+@keyframes float{
+  from{ transform:translateY(100vh); opacity:1; }
+  to{ transform:translateY(-10vh); opacity:0; }
+}
+
+/* Popup */
+.popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  z-index:5;
+  justify-content:center;
+  align-items:center;
+}
+
+.popup-box{
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  animation:pop 0.4s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(0);}
+  to{transform:scale(1);}
+}
+
+/* Fireworks canvas */
+#fireworks{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:4;
+}
